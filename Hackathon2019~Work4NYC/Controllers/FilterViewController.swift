@@ -9,22 +9,21 @@
 import UIKit
 
 class FilterViewController: UIViewController {
-
+    
+    let filterView = FilterView()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        view.addSubview(filterView)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7270708476)
+        filterView.translatesAutoresizingMaskIntoConstraints = false
+        filterView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
+        filterView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
+        filterView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        filterView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
-    */
 
 }
