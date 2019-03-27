@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
+
     }
 
 
