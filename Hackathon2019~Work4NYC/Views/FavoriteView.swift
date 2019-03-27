@@ -9,13 +9,10 @@
 import UIKit
 
 class FavoriteView: UIView {
+    public lazy var favoriteView: UITableView = {
+        let favoriteTableView = UITableView()
+        return favoriteTableView
+        }()
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    
 }
