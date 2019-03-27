@@ -16,17 +16,16 @@ class FavoriteView: UIView {
         override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         backgroundColor = .white
+        self.favoriteView.register(FavoriteViewCell.self, forCellReuseIdentifier: "FavoriteCell")
         commonInit()
-        
-    }
+        }
         required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
         func commonInit(){
         backgroundColor = .white
-//        self.myCollectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "JobTableViewCell")
-        
+                
     }
     func anchor (top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?, paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat, height: CGFloat, enableInsets: Bool) {
         var topInset = CGFloat(0)
