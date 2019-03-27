@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let searchVC = UINavigationController.init(rootViewController: SearchViewController())
+        let savedJobsVC = UINavigationController.init(rootViewController: FavoriteViewController())
+        _ = UINavigationController.init(rootViewController: FilterViewController())
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [searchVC, savedJobsVC]
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = tabBar
         return true
     }
 
