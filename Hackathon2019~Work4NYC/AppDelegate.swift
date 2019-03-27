@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = tabBar
+        
+        searchVC.tabBarItem = UITabBarItem.init(title: "Job Search", image: UIImage.init(named: "icons8-job_filled"), tag: 0)
+        savedJobsVC.tabBarItem = UITabBarItem.init(title: "Saved Jobs", image: UIImage.init(named: "icons8-save_search_filled"), tag: 1)
         return true
     }
 
