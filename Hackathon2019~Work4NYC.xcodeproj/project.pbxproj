@@ -19,6 +19,8 @@
 		047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB84224BF67200E2B1EA /* FilterView.swift */; };
 		047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB86224BF68300E2B1EA /* FavoriteView.swift */; };
 		047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */; };
+		937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE766224C176300B2B9D1 /* WebViewController.swift */; };
+		937EE769224C177000B2B9D1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE768224C177000B2B9D1 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		047DAB84224BF67200E2B1EA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		047DAB86224BF68300E2B1EA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingModel.swift; sourceTree = "<group>"; };
+		937EE766224C176300B2B9D1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		937EE768224C177000B2B9D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */,
 				047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */,
 				047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */,
+				937EE766224C176300B2B9D1 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 				047DAB82224BF66500E2B1EA /* DetailView.swift */,
 				047DAB84224BF67200E2B1EA /* FilterView.swift */,
 				047DAB86224BF68300E2B1EA /* FavoriteView.swift */,
+				937EE768224C177000B2B9D1 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047DAB79224BD4FC00E2B1EA /* DetailViewController.swift in Sources */,
+				937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */,
 				047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */,
 				047DAB7B224BD52000E2B1EA /* FilterViewController.swift in Sources */,
 				047DAB83224BF66500E2B1EA /* DetailView.swift in Sources */,
@@ -187,6 +194,7 @@
 				047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */,
 				047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */,
 				047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */,
+				937EE769224C177000B2B9D1 /* WebView.swift in Sources */,
 				047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */,
 				047DAB7D224BD53400E2B1EA /* FavoriteViewController.swift in Sources */,
 			);
