@@ -19,13 +19,12 @@
 		047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB84224BF67200E2B1EA /* FilterView.swift */; };
 		047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB86224BF68300E2B1EA /* FavoriteView.swift */; };
 		047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */; };
-<<<<<<< HEAD
+
 		937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE766224C176300B2B9D1 /* WebViewController.swift */; };
 		937EE769224C177000B2B9D1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE768224C177000B2B9D1 /* WebView.swift */; };
-=======
+
 		047DAB8D224C0E5500E2B1EA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */; };
 		75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */; };
->>>>>>> 577f04f5b2f083a9f510df5ce508919e1ab0bb87
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +42,11 @@
 		047DAB84224BF67200E2B1EA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		047DAB86224BF68300E2B1EA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingModel.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		937EE766224C176300B2B9D1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		937EE768224C177000B2B9D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-=======
+
 		047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
->>>>>>> 577f04f5b2f083a9f510df5ce508919e1ab0bb87
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,11 +212,8 @@
 				047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */,
 				047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */,
 				047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */,
-<<<<<<< HEAD
 				937EE769224C177000B2B9D1 /* WebView.swift in Sources */,
-=======
 				75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */,
->>>>>>> 577f04f5b2f083a9f510df5ce508919e1ab0bb87
 				047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */,
 				047DAB7D224BD53400E2B1EA /* FavoriteViewController.swift in Sources */,
 			);
