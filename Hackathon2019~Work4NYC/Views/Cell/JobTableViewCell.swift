@@ -67,17 +67,26 @@ class JobTableViewCell: UITableViewCell {
     private func setupJobPositionConstrains(){
         addSubview(jobPosition)
         jobPosition.translatesAutoresizingMaskIntoConstraints = false
-        jobPosition.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        jobPosition.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
         jobPosition.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true
         jobPosition.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
+    
+    private func setupPostedDateLabelConstrains(){
+        addSubview(postedDate)
+        postedDate.translatesAutoresizingMaskIntoConstraints = false
+        postedDate.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        postedDate.leadingAnchor.constraint(equalTo: jobPosition.trailingAnchor).isActive = true
+        postedDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        postedDate.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
     private func setupJobLocationConstrains(){
         addSubview(jobLocation)
         jobLocation.translatesAutoresizingMaskIntoConstraints = false
         jobLocation.topAnchor.constraint(equalTo: jobPosition.bottomAnchor, constant: 10).isActive = true
-        jobLocation.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        jobLocation.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
         jobLocation.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200).isActive = true
         jobLocation.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
@@ -86,19 +95,12 @@ class JobTableViewCell: UITableViewCell {
         addSubview(salary)
         salary.translatesAutoresizingMaskIntoConstraints = false
         salary.topAnchor.constraint(equalTo: jobLocation.bottomAnchor, constant: 10).isActive = true
-        salary.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        salary.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200).isActive = true
+        salary.leadingAnchor.constraint(equalTo: leadingAnchor,  constant: 5).isActive = true
+        salary.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true
         salary.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
-    private func setupPostedDateLabelConstrains(){
-        addSubview(postedDate)
-        postedDate.translatesAutoresizingMaskIntoConstraints = false
-        postedDate.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        postedDate.leadingAnchor.constraint(equalTo: jobPosition.trailingAnchor).isActive = true
-        postedDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
-        postedDate.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        }
+
 
     private func setupSaveJobLabelConstrains(){
         addSubview(saveButton)

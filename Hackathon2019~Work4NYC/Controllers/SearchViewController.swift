@@ -28,9 +28,11 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let jobCell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as? JobTableViewCell else {return UITableViewCell()}
-        jobCell.jobLocation.text = "job location is to come here"
-        jobCell.jobPosition.text = "Banker"
+        jobCell.jobLocation.text = "Job location"
+        jobCell.jobPosition.text = "Job Position"
         jobCell.postedDate.text = "Date"
+        jobCell.salary.text = "Salary"
+        jobCell.saveButton.setTitle("Save Job", for: .normal)
         jobCell.backgroundColor = .clear
         jobCell.layer.borderWidth = 2
         jobCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -39,7 +41,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 160
     }
     
     
