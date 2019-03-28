@@ -11,7 +11,7 @@ import UIKit
 class JobsTimelineViewController: UIViewController {
     var counter = 0
     let jobsTimelineView = JobsTimeLineView()
-    static var quota = 0.0
+    var quota = 0.0
     
     private  var tapGuesture: UITapGestureRecognizer!
     private var jobs = [Job](){
@@ -26,6 +26,11 @@ class JobsTimelineViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(jobsTimelineView)
         view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
+//        UserDefaults.standard.removeObject(forKey: "setQuota")
+//        UserDefaults.standard.removeObject(forKey: "quota")
+        if let quota = UserDefaults.standard.object(forKey: "quota") as? Double {
+            self.quota = quota
+        }
         jobsTimelineView.collectionView.delegate = self
         jobsTimelineView.collectionView.dataSource = self
         setupJobSearchAction()
@@ -66,7 +71,8 @@ class JobsTimelineViewController: UIViewController {
     
     @objc private func likeJobButtonPressed(){
         counter += 1
-        JobsTimelineViewController.quota += 1
+        quota += 1
+        UserDefaults.standard.set(quota, forKey: "quota")
         let indexPath = IndexPath(row: counter, section: 0)
         jobsTimelineView.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
        let job = jobs[indexPath.row]
