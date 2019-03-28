@@ -31,6 +31,7 @@ class JobsTimelineViewController: UIViewController {
         setupJobSearchAction()
         getJobs()
         saveJob()
+        deleteJob()
     }
     
     
@@ -55,8 +56,8 @@ class JobsTimelineViewController: UIViewController {
                 }
             }
         }
-    }
     
+    }
     
     private func saveJob(){
         jobsTimelineView.likeButton.addTarget(self, action: #selector(likeJobButtonPressed), for: .touchUpInside)
@@ -70,9 +71,19 @@ class JobsTimelineViewController: UIViewController {
         jobsTimelineView.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
        let job = jobs[indexPath.row]
         JobModel.addJob(job: job)
+        jobsTimelineView.likeButton.backgroundColor = .green
+    
     }
     
     private func deleteJob(){
+       jobsTimelineView.disLikeButton.addTarget(self, action: #selector(deleteButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc private func deleteButtonPressed(){
+        counter += 1
+        let indexPath = IndexPath(row: counter, section: 0)
+        jobsTimelineView.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        jobsTimelineView.disLikeButton.backgroundColor = .red
         
     }
     
