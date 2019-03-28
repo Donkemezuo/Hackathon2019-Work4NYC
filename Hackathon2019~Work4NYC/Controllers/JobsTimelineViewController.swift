@@ -9,9 +9,10 @@
 import UIKit
 
 class JobsTimelineViewController: UIViewController {
+    var counter = 0
     let jobsTimelineView = JobsTimeLineView()
-    private  var tapGuesture: UITapGestureRecognizer!
     
+    private  var tapGuesture: UITapGestureRecognizer!
     private var jobs = [Job](){
         didSet {
             DispatchQueue.main.async {
@@ -28,6 +29,7 @@ class JobsTimelineViewController: UIViewController {
         jobsTimelineView.collectionView.dataSource = self
         setupJobSearchAction()
         getJobs()
+        saveJob()
     }
     
     
@@ -52,6 +54,18 @@ class JobsTimelineViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    private func saveJob(){
+        jobsTimelineView.likeButton.addTarget(self, action: #selector(likeJobButtonPressed), for: .touchUpInside)
+      
+    }
+    
+    @objc private func likeJobButtonPressed(){
+        showAlert(title: "Job Liked", message: "Job saved")
+        print("Job liked")
+        
     }
     
     }
