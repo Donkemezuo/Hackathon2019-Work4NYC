@@ -25,6 +25,7 @@ var favoriteJobs = JobModel.getJob()
         controlView.favoriteView.delegate = self
         controlView.favoriteView.dataSource = self
         populateData(keyword: "")
+        reload()
     }
     func populateData(keyword: String) {
         jobs = JobModel.getJob()
