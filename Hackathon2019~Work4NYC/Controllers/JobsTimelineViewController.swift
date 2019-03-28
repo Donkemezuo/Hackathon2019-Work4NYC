@@ -11,6 +11,7 @@ import UIKit
 class JobsTimelineViewController: UIViewController {
     var counter = 0
     let jobsTimelineView = JobsTimeLineView()
+    static var quota = 0.0
     
     private  var tapGuesture: UITapGestureRecognizer!
     private var jobs = [Job](){
@@ -63,8 +64,14 @@ class JobsTimelineViewController: UIViewController {
     }
     
     @objc private func likeJobButtonPressed(){
-        showAlert(title: "Job Liked", message: "Job saved")
-        print("Job liked")
+        counter += 1
+        JobsTimelineViewController.quota += 1
+        let indexPath = IndexPath(row: counter, section: 0)
+        jobsTimelineView.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        //showAlert(title: "Job Liked", message: "Job saved")
+    }
+    
+    private func deleteJob(){
         
     }
     
