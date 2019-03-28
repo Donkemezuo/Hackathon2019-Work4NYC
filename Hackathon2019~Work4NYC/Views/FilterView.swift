@@ -8,6 +8,16 @@
 
 import UIKit
 
+protocol FilterViewButtonsDelegate: AnyObject {
+    func okayButtonPressed()
+    func cancelButtonPressed()
+    func hourlyButtonPressed()
+    func dailyButtonPressed()
+    func annualButtonPressed()
+    func partTimeButtonPressed()
+    func fullTimeButtonPressed()
+}
+
 class FilterView: UIView {
     
     lazy var salaryTypeLabel: UILabel = {
@@ -32,6 +42,7 @@ class FilterView: UIView {
         button.backgroundColor = .white
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.addTarget(self, action: #selector(hourlyPressed), for: .touchUpInside)
         return button
     }()
     lazy var dailyButton: UIButton = {
@@ -42,6 +53,7 @@ class FilterView: UIView {
         button.backgroundColor = .white
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.addTarget(self, action: #selector(dailyPressed), for: .touchUpInside)
         return button
     }()
     lazy var annualButton: UIButton = {
@@ -52,6 +64,7 @@ class FilterView: UIView {
         button.backgroundColor = .white
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.addTarget(self, action: #selector(annualPressed), for: .touchUpInside)
         return button
     }()
     
@@ -63,6 +76,7 @@ class FilterView: UIView {
         button.backgroundColor = .white
         button.backgroundColor = .white
         button.layer.borderWidth = 1
+        button.addTarget(self, action: #selector(partTimePressed), for: .touchUpInside)
         return button
     }()
     
@@ -74,9 +88,26 @@ class FilterView: UIView {
         button.backgroundColor = .white
         button.backgroundColor = .white
         button.layer.borderWidth = 1
+        button.addTarget(self, action: #selector(fullTimePressed), for: .touchUpInside)
         return button
     }()
     
+    lazy var okayButton: UIButton = {
+      let button = UIButton()
+        button.setTitle("Okay", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(okayPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var cancelButton: UIButton = {
+       let button = UIButton()
+        button.setTitle("Cancel", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
+        return button
+    }()
+    weak var delegate: FilterViewButtonsDelegate?
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         backgroundColor = .white
@@ -87,6 +118,8 @@ class FilterView: UIView {
         setupScheduleTypeLabel()
         setupPartTimeButton()
         setupFullTimeButton()
+        setupCancelButton()
+        setupOkayButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -146,5 +179,45 @@ class FilterView: UIView {
         
     }
     
+    func setupCancelButton() {
+        addSubview(cancelButton)
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -75).isActive = true
+        cancelButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    }
+    
+    func setupOkayButton() {
+        addSubview(okayButton)
+        okayButton.translatesAutoresizingMaskIntoConstraints = false
+        okayButton.centerXAnchor.constraint(equalTo: cancelButton.centerXAnchor).isActive = true
+        okayButton.bottomAnchor.constraint(equalTo: cancelButton.topAnchor, constant: -20).isActive = true
+    }
+    
+    @objc func cancelPressed() {
+        delegate?.cancelButtonPressed()
+    }
+    @objc func okayPressed() {
+        delegate?.okayButtonPressed()
+    }
+    
+    @objc func hourlyPressed() {
+        delegate?.hourlyButtonPressed()
+    }
+    
+    @objc func dailyPressed() {
+        delegate?.dailyButtonPressed()
+    }
+    
+    @objc func annualPressed() {
+        delegate?.annualButtonPressed()
+    }
+    
+    @objc func partTimePressed() {
+        delegate?.partTimeButtonPressed()
+    }
+    
+    @objc func fullTimePressed() {
+        delegate?.fullTimeButtonPressed()
+    }
     
 }
