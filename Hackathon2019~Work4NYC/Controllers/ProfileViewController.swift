@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(profileView)
+        view.backgroundColor = .white
+        
         profileView.delegate = self
         profileView.timerCircle(strokeValue: CGFloat(quota), radius: view.bounds.width / 4)
         //        setupView()
