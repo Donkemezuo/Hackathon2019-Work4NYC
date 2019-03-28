@@ -27,13 +27,7 @@ var favoriteJobs = JobModel.getJob()
         populateData(keyword: "")
     }
     func populateData(keyword: String) {
-        JobAPIClient.getJobs(keyword: keyword) { (error, data) in
-            if let error = error {
-                print("Error getting data : \(error)")
-            } else if let data = data {
-                self.jobs = data
-            }
-        }
+        jobs = JobModel.getJob()
     }
     func reload() {
         favoriteJobs = JobModel.getJob()
@@ -61,6 +55,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         favoriteCell.locationLabel.text = "Job Location"
         favoriteCell.salaryLabel.text = "Job Salary"
         favoriteCell.titleLabel.text = "Job Title"
+        favoriteCell.deleteButton.setTitle("Delete Job", for: .normal)
         favoriteCell.backgroundColor = .clear
         favoriteCell.layer.borderWidth = 2
         favoriteCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

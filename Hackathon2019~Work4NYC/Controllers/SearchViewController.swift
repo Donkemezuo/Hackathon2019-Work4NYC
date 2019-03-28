@@ -31,7 +31,16 @@ class SearchViewController: UIViewController {
         searchView.delegate = self
     }
     
-
+    @objc func saveButtonPressed(sender: UIButton) {
+        let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        let saveAction = UIAlertAction(title: "Save", style: .destructive) { (UIAlertAction) in
+            let job = Job(agency: "g", business_title: "g", job_description: "g", job_id: "g", full_time_part_time_indicator: "g", minimum_qual_requirements: "G", salary_frequency: "g", salary_range_from: "g", salary_range_to: "G", work_location: "g")
+            JobModel.addJob(job: job)
+            
+        }
+        optionMenu.addAction(saveAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 
 }
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
