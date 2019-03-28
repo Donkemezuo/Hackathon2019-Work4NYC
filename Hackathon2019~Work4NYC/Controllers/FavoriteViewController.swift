@@ -43,6 +43,7 @@ var favoriteJobs = JobModel.getJob()
         let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
             JobModel.deleteJob(index: sender.tag)
+            self.jobs.remove(at: sender.tag)
             self.reload()
             }
         optionMenu.addAction(deleteAction)
@@ -62,6 +63,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         favoriteCell.locationLabel.text = job.work_location
         favoriteCell.salaryLabel.text = job.salary_range_from
         favoriteCell.titleLabel.text = job.business_title
+        favoriteCell.deleteButton.tag = indexPath.row
         favoriteCell.deleteButton.setTitle("Delete Job", for: .normal)
         favoriteCell.deleteButton.addTarget(self, action: #selector(deleteButtonPressed(sender:)), for: .touchUpInside)
         favoriteCell.backgroundColor = .clear
