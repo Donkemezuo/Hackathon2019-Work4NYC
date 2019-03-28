@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         savedJobsVC.tabBarItem = UITabBarItem.init(title: "Saved Jobs", image: UIImage.init(named: "icons8-save_search_filled"), tag: 1)
         profile.tabBarItem = UITabBarItem.init(title: "Profile", image: UIImage.init(named: "icons8-user"), tag: 2)
 
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if let error = error {
+                print("Request Authorization error: \(error)")
+            } else if granted{
+                print("authorization granted")
+            } else{
+                print("user denied")
+            }
+        }
+        
         return true
     }
 
