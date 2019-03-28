@@ -29,8 +29,9 @@ class FavoriteViewCell: UITableViewCell {
         commonInit()
         }
     required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.commonInit()
         fatalError("error")
-        commonInit()
     }
     private func commonInit() {
         setupLocationLabel()
