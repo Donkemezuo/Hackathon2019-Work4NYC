@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
-
+        populateData(keyword: "")
         searchView.delegate = self
     }
     
@@ -36,9 +36,7 @@ class SearchViewController: UIViewController {
 }
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-        searchView.jobSearchBar.delegate = self
-        populateData(keyword: "")
+        return jobs.count
     }
     func populateData(keyword: String) {
         JobAPIClient.getJobs(keyword: keyword) { (error, data) in
@@ -49,7 +47,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
-}
+
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,10 +98,10 @@ extension SearchViewController: FilterButtonDelegate{
 extension SearchViewController: FilterVCDelegate {
     func filterWereSelected(salaryType: String?, scheduleType: String?) {
         if let salaryType = salaryType {
-
+           jobs = jobs.filter{$0.salary_frequency == salaryType}
         }
         if let scheduleType = scheduleType {
-
+            jobs = jobs.filter{$0.full_time_part_time_indicator == scheduleType}
         }
         
     }
