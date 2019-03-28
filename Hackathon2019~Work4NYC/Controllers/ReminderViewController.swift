@@ -51,6 +51,8 @@ extension ReminderViewController: ReminderButtonsDelegates {
                 print("successfully added notification")
             }
         }
+        showAlert(title: "Reminder set", message: nil)
+        dismiss(animated: true)
     }
     
     

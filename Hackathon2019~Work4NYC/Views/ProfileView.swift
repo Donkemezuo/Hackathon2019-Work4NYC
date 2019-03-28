@@ -30,18 +30,21 @@ class ProfileView: UIView {
         label.textAlignment = .center
         label.text = String(0)
         label.font = UIFont.systemFont(ofSize: 75)
+        label.textColor = .white
         return label
     }()
     
     lazy var setQuotaLabelTitle: UILabel = {
         let label = UILabel()
         label.text = "Change your quota:"
+        label.textColor = .white
         return label
     }()
     
     lazy var setQuotaLabel: UILabel = {
         let label = UILabel()
         label.text = String(0)
+        label.textColor = .white
         return label
     }()
     func timerCircle (strokeValue: CGFloat, radius: CGFloat?){

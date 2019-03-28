@@ -16,12 +16,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(profileView)
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.3410598636, green: 0.7661687136, blue: 0.9684112668, alpha: 1)
         profileView.setQuotaLabel.text = quota.description
         profileView.delegate = self
         if let quota = UserDefaults.standard.object(forKey: "quota") as? Double {
             self.quota = quota
             print(quota)
+        }
+        if let setQuota = UserDefaults.standard.object(forKey: "setQuota") as? Double {
+            self.setQuota = setQuota
+            print(setQuota)
         }
         profileView.quotaLabel.text = quota.description
         profileView.timerCircle(strokeValue: CGFloat(quota / setQuota), radius: view.bounds.width / 4)
