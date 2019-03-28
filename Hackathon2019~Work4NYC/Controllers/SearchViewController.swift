@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
     @objc func saveButtonPressed(sender: UIButton) {
         let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         let saveAction = UIAlertAction(title: "Save", style: .destructive) { (UIAlertAction) in
-            let job = Job(agency: "g", business_title: "g", job_description: "g", job_id: "g", full_time_part_time_indicator: "g", minimum_qual_requirements: "G", salary_frequency: "g", salary_range_from: "g", salary_range_to: "G", work_location: "g")
+            let job = self.jobs[sender.tag]
             JobModel.addJob(job: job)
             
         }
@@ -66,6 +66,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         jobCell.jobPosition.text = job.business_title
         jobCell.salary.text = job.salary_frequency
         jobCell.saveButton.setTitle("Save Job", for: .normal)
+        jobCell.saveButton.tag = indexPath.row
+        jobCell.saveButton.addTarget(self, action: #selector(saveButtonPressed(sender:)), for: .touchUpInside)
         jobCell.backgroundColor = .clear
         jobCell.layer.borderWidth = 2
         jobCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
