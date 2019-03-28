@@ -146,13 +146,7 @@
 				047DAB86224BF68300E2B1EA /* FavoriteView.swift */,
 
 				041BAFC7224D108800D86919 /* JobsTimeLineView.swift */,
-<<<<<<< HEAD
-
-
-=======
 				041BAFD6224D42BF00D86919 /* ReminderView.swift */,
-				937EE768224C177000B2B9D1 /* WebView.swift */,
->>>>>>> 56096736e5a26e3fd5efaf55d39c0922ca3d92c0
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,14 +254,8 @@
 
 				041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */,
 				041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */,
-<<<<<<< HEAD
-
-
-=======
 				041BAFD9224D42D100D86919 /* ReminderViewController.swift in Sources */,
-				937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */,
 				041BAFDB224D45CE00D86919 /* UIAlert+Extension.swift in Sources */,
->>>>>>> 56096736e5a26e3fd5efaf55d39c0922ca3d92c0
 				937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */,
 				047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */,
 				047DAB7B224BD52000E2B1EA /* FilterViewController.swift in Sources */,
