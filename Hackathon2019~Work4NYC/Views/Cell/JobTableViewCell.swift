@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class JobTableViewCell: UITableViewCell {
     
     public lazy var jobPosition: UILabel = {
@@ -113,5 +112,9 @@ class JobTableViewCell: UITableViewCell {
         saveButton.leadingAnchor.constraint(equalTo: salary.trailingAnchor).isActive = true
         saveButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         saveButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
+    @objc func saveButtonPressed(sender: UIButton) {
+        let job = Job(agency: "g", business_title: "g", job_description: "g", job_id: "g", full_time_part_time_indicator: "g", minimum_qual_requirements: "G", salary_frequency: "g", salary_range_from: "g", salary_range_to: "G", work_location: "g")
+            JobModel.addJob(job: job)
     }
 }
