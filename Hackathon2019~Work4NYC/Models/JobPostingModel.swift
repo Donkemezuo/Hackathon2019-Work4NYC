@@ -9,6 +9,7 @@
 import Foundation
 
 struct Job: Codable {
+    let agency: String
     let business_title: String
     let job_description: String?
     let job_id: String

@@ -20,6 +20,20 @@ class DetailViewController: UIViewController {
         detailView.monsterButton.addTarget(self, action: #selector(monsterSegue), for: .touchUpInside)
         detailView.indeedButton.addTarget(self, action: #selector(indeedSegue), for: .touchUpInside)
         detailView.linkedInButton.addTarget(self, action: #selector(linkedInSegue), for: .touchUpInside)
+        updateUI()
+    }
+    private func updateUI() {
+        detailView.titleLabel.text = job?.business_title
+        detailView.companyName.text = job?.agency
+        detailView.descriptionTextView.text = job?.job_description ?? "N/A"
+        detailView.salaryLabel.text = "Salary: (\(job?.salary_frequency ?? "N/A")), From: $\(job?.salary_range_from ?? "N/A")-$\(job?.salary_range_to ?? "N/A"))"
+        if job?.full_time_part_time_indicator?.capitalized == "F" {
+            detailView.scheduleTypeLabel.text = "Full-Time"
+        } else if job?.full_time_part_time_indicator?.capitalized == "P" {
+            detailView.scheduleTypeLabel.text = "Part-Time"
+        } else {
+            detailView.scheduleTypeLabel.text = "N/A"
+        }
     }
     @objc func nycGovSegue() {
         let keyword = job?.business_title.replacingOccurrences(of: " ", with: "")
