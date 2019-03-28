@@ -7,6 +7,9 @@
 //
 
 import UIKit
+protocol FilterButtonDelegate: AnyObject {
+    func filterPressed()
+}
 
 class SearchView: UIView {
 
@@ -20,6 +23,7 @@ class SearchView: UIView {
         filterButton.titleLabel?.textColor = .blue
         filterButton.setTitle("Customize Search", for: .normal)
         filterButton.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
+        filterButton.addTarget(self, action: #selector(filterButtonPressed), for: .touchUpInside)
         return filterButton
     }()
 
@@ -30,7 +34,8 @@ class SearchView: UIView {
     }()
 
 
-
+weak var delegate: FilterButtonDelegate?
+    
 override init(frame: CGRect) {
     super.init(frame: UIScreen.main.bounds)
       self.jobsTableView.register(JobTableViewCell.self, forCellReuseIdentifier: "jobCell")
@@ -86,5 +91,8 @@ private func setupSearchBarConstrains(){
         jobsTableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
+    @objc func filterButtonPressed() {
+        delegate?.filterPressed()
+    }
 
 }

@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol FilterVCDelegate: AnyObject {
+    func filterWereSelected(salaryType: String?, scheduleType: String?)
+}
 class SearchViewController: UIViewController {
     let searchView = SearchView()
 
@@ -24,8 +27,16 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
-        searchView.jobSearchBar.delegate = self
         populateData(keyword: "")
+        searchView.delegate = self
+    }
+    
+
+
+}
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobs.count
     }
     func populateData(keyword: String) {
         JobAPIClient.getJobs(keyword: keyword) { (error, data) in
@@ -36,11 +47,8 @@ class SearchViewController: UIViewController {
             }
         }
     }
-}
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobs.count
-    }
+
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let jobCell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as? JobTableViewCell else {return UITableViewCell()}
@@ -79,3 +87,24 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+extension SearchViewController: FilterButtonDelegate{
+    func filterPressed() {
+        let filterVC = FilterViewController()
+        filterVC.filterDelegate = self
+        filterVC.modalPresentationStyle = .overFullScreen
+        present(filterVC, animated: true)
+    }
+}
+extension SearchViewController: FilterVCDelegate {
+    func filterWereSelected(salaryType: String?, scheduleType: String?) {
+        if let salaryType = salaryType {
+           jobs = jobs.filter{$0.salary_frequency == salaryType}
+        }
+        if let scheduleType = scheduleType {
+            jobs = jobs.filter{$0.full_time_part_time_indicator == scheduleType}
+        }
+        
+    }
+    
+    
+}
