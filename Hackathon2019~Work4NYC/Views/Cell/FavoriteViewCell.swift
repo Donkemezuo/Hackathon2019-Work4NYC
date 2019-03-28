@@ -23,6 +23,7 @@ class FavoriteViewCell: UITableViewCell {
     }()
     public lazy var deleteButton: UIButton = {
         let deleteButton = UIButton()
+        deleteButton.backgroundColor = .blue
         return deleteButton
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -71,8 +72,9 @@ class FavoriteViewCell: UITableViewCell {
         
         deleteButton.translatesAutoresizingMaskIntoConstraints = false
         deleteButton.topAnchor.constraint(equalTo: salaryLabel.bottomAnchor, constant: 10).isActive = true
-        deleteButton.leadingAnchor.constraint(equalTo: salaryLabel.trailingAnchor).isActive = true
+        deleteButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
         deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         deleteButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
     }
 }
