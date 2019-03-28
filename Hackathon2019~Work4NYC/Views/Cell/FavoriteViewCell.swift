@@ -75,6 +75,9 @@ class FavoriteViewCell: UITableViewCell {
         deleteButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
         deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         deleteButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
     }
-}
+        @objc func deleteButtonPressed(sender: UIButton) {
+            JobModel.deleteJob(index: sender.tag)
+        }
+    }
+
