@@ -53,9 +53,10 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let favoriteCell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteViewCell else { return UITableViewCell()}
-        favoriteCell.locationLabel.text = "Job Location"
-        favoriteCell.salaryLabel.text = "Job Salary"
-        favoriteCell.titleLabel.text = "Job Title"
+        let job = favoriteJobs[indexPath.row]
+        favoriteCell.locationLabel.text = job.work_location
+        favoriteCell.salaryLabel.text = job.salary_range_from
+        favoriteCell.titleLabel.text = job.business_title
         favoriteCell.deleteButton.setTitle("Delete Job", for: .normal)
         favoriteCell.backgroundColor = .clear
         favoriteCell.layer.borderWidth = 2
