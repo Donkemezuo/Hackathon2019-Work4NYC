@@ -23,7 +23,7 @@ class SearchViewController: UIViewController {
     }
     override func viewDidLoad() {
         view.addSubview(searchView)
-        view.backgroundColor = #colorLiteral(red: 0.72706002, green: 0, blue: 0.1062836573, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
@@ -31,7 +31,16 @@ class SearchViewController: UIViewController {
         searchView.delegate = self
     }
     
-
+    @objc func saveButtonPressed(sender: UIButton) {
+        let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        let saveAction = UIAlertAction(title: "Save", style: .destructive) { (UIAlertAction) in
+            let job = self.jobs[sender.tag]
+            JobModel.addJob(job: job)
+            
+        }
+        optionMenu.addAction(saveAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 
 }
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -57,6 +66,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         jobCell.jobPosition.text = job.business_title
         jobCell.salary.text = job.salary_frequency
         jobCell.saveButton.setTitle("Save Job", for: .normal)
+        jobCell.saveButton.tag = indexPath.row
+        jobCell.saveButton.addTarget(self, action: #selector(saveButtonPressed(sender:)), for: .touchUpInside)
         jobCell.backgroundColor = .clear
         jobCell.layer.borderWidth = 2
         jobCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -78,11 +89,17 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         populateData(keyword: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
             populateData(keyword: "")
+            searchBar.resignFirstResponder()
         }
+    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
     }
 }
 

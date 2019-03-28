@@ -51,14 +51,14 @@ class ProfileView: UIView {
         if let radius = radius {
             let circularPath = UIBezierPath(arcCenter: .zero, radius: radius, startAngle:  0, endAngle: 2 * CGFloat.pi, clockwise: true)
             trackLayer.path = circularPath.cgPath
-            trackLayer.strokeColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            trackLayer.strokeColor = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1)
             trackLayer.lineCap = CAShapeLayerLineCap.round
             trackLayer.fillColor = UIColor.clear.cgColor
             trackLayer.lineWidth = 20
             trackLayer.position = position
             layer.addSublayer(trackLayer)
             shapeLayer.path = circularPath.cgPath
-            shapeLayer.strokeColor = #colorLiteral(red: 0, green: 0.6274659038, blue: 0, alpha: 1)
+            shapeLayer.strokeColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
             shapeLayer.lineCap = CAShapeLayerLineCap.round
             shapeLayer.fillColor = UIColor.clear.cgColor
             shapeLayer.lineWidth = 20
