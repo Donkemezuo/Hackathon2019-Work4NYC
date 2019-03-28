@@ -41,25 +41,34 @@ class FavoriteViewCell: UITableViewCell {
     private func setupLocationLabel() {
         addSubview(locationLabel)
         locationLabel.translatesAutoresizingMaskIntoConstraints = false
-        locationLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95).isActive = true
-        locationLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        locationLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        locationLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95).isActive = true
+//        locationLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
+        locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30)
+        locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
+        locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100)
+        locationLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+
     }
     private func setupSalaryLabel() {
         addSubview(salaryLabel)
         salaryLabel.translatesAutoresizingMaskIntoConstraints = false
-        salaryLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.90).isActive = true
-        salaryLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        salaryLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        salaryLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        salaryLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.90).isActive = true
+//        salaryLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
+        salaryLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10)
+        salaryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
+        salaryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200)
+        salaryLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+
     }
     private func setupTitleLabel() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
-        titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
+//        titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20)
+        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -150)
+        titleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+
     }
 }
