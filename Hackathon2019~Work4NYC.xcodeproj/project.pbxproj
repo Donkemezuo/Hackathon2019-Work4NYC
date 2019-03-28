@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041BAFC8224D108800D86919 /* JobsTimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFC7224D108800D86919 /* JobsTimeLineView.swift */; };
+		041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */; };
+		041BAFCC224D1D7E00D86919 /* JobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */; };
+		041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */; };
+		041BAFD1224D21E800D86919 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD0224D21E800D86919 /* JobModel.swift */; };
+		041BAFD3224D225100D86919 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD2224D225100D86919 /* ProfileViewController.swift */; };
+		041BAFD5224D226D00D86919 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD4224D226D00D86919 /* ProfileView.swift */; };
 		047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB66224BD45200E2B1EA /* AppDelegate.swift */; };
 		047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB68224BD45200E2B1EA /* SearchViewController.swift */; };
 		047DAB6E224BD45500E2B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047DAB6D224BD45500E2B1EA /* Assets.xcassets */; };
@@ -29,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041BAFC7224D108800D86919 /* JobsTimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTimeLineView.swift; sourceTree = "<group>"; };
+		041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTimelineViewController.swift; sourceTree = "<group>"; };
+		041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewCell.swift; sourceTree = "<group>"; };
+		041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		041BAFD0224D21E800D86919 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		041BAFD2224D225100D86919 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		041BAFD4224D226D00D86919 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		047DAB63224BD45200E2B1EA /* Hackathon2019~Work4NYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon2019~Work4NYC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047DAB66224BD45200E2B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047DAB68224BD45200E2B1EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041BAFCD224D217800D86919 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */,
+				041BAFD0224D21E800D86919 /* JobModel.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		047DAB5A224BD45200E2B1EA = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +105,7 @@
 		047DAB65224BD45200E2B1EA /* Hackathon2019~Work4NYC */ = {
 			isa = PBXGroup;
 			children = (
-				75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */,
+				041BAFCD224D217800D86919 /* SupportingFiles */,
 				047DAB88224BF9EA00E2B1EA /* Models */,
 				047DAB7F224BF60900E2B1EA /* Views */,
 				047DAB7E224BF5E700E2B1EA /* Controllers */,
@@ -98,6 +121,8 @@
 		047DAB7E224BF5E700E2B1EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */,
+				041BAFD2224D225100D86919 /* ProfileViewController.swift */,
 				047DAB68224BD45200E2B1EA /* SearchViewController.swift */,
 				047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */,
 				047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */,
@@ -113,8 +138,10 @@
 				047DAB8B224C0E0400E2B1EA /* Cell */,
 				047DAB80224BF64800E2B1EA /* SearchView.swift */,
 				047DAB82224BF66500E2B1EA /* DetailView.swift */,
+				041BAFD4224D226D00D86919 /* ProfileView.swift */,
 				047DAB84224BF67200E2B1EA /* FilterView.swift */,
 				047DAB86224BF68300E2B1EA /* FavoriteView.swift */,
+				041BAFC7224D108800D86919 /* JobsTimeLineView.swift */,
 				937EE768224C177000B2B9D1 /* WebView.swift */,
 			);
 			path = Views;
@@ -132,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */,
+				041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */,
+				75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -218,6 +247,8 @@
 			files = (
 				047DAB79224BD4FC00E2B1EA /* DetailViewController.swift in Sources */,
 				937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */,
+				041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */,
+				041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */,
 				937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */,
 				937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */,
 				047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */,
@@ -229,10 +260,15 @@
 				047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */,
 				047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */,
 				047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */,
+				041BAFD3224D225100D86919 /* ProfileViewController.swift in Sources */,
+				041BAFD5224D226D00D86919 /* ProfileView.swift in Sources */,
 				937EE769224C177000B2B9D1 /* WebView.swift in Sources */,
 				75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */,
+				041BAFD1224D21E800D86919 /* JobModel.swift in Sources */,
+				041BAFCC224D1D7E00D86919 /* JobsCollectionViewCell.swift in Sources */,
 				047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */,
 				047DAB7D224BD53400E2B1EA /* FavoriteViewController.swift in Sources */,
+				041BAFC8224D108800D86919 /* JobsTimeLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
