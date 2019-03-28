@@ -20,14 +20,10 @@
 		047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB86224BF68300E2B1EA /* FavoriteView.swift */; };
 		047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */; };
 		047DAB8D224C0E5500E2B1EA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */; };
-
 		75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */; };
 		937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76A224C32FB00B2B9D1 /* AppError.swift */; };
 		937EE76D224C33A700B2B9D1 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */; };
 		937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */; };
-
-		45F1A386C1E36083A46BE5A5 /* Pods_Hackathon2019_Work4NYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B9522A39F228B3A7D9120B /* Pods_Hackathon2019_Work4NYC.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,16 +42,10 @@
 		047DAB86224BF68300E2B1EA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingModel.swift; sourceTree = "<group>"; };
 		047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
-
 		75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
 		937EE76A224C32FB00B2B9D1 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPIClient.swift; sourceTree = "<group>"; };
-
-		269E1170668DF6CABFDC1551 /* Pods-Hackathon2019~Work4NYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2019~Work4NYC.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon2019~Work4NYC/Pods-Hackathon2019~Work4NYC.debug.xcconfig"; sourceTree = "<group>"; };
-		42B9522A39F228B3A7D9120B /* Pods_Hackathon2019_Work4NYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon2019_Work4NYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACAF4A66788EBB418ABE71A6 /* Pods-Hackathon2019~Work4NYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2019~Work4NYC.release.xcconfig"; path = "Target Support Files/Pods-Hackathon2019~Work4NYC/Pods-Hackathon2019~Work4NYC.release.xcconfig"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F1A386C1E36083A46BE5A5 /* Pods_Hackathon2019_Work4NYC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +64,6 @@
 			children = (
 				047DAB65224BD45200E2B1EA /* Hackathon2019~Work4NYC */,
 				047DAB64224BD45200E2B1EA /* Products */,
-				5DD7C13323274418FDA427FD /* Pods */,
-				D6AE331477947451943B9E7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,7 +130,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-
 		937EE76E224C33C300B2B9D1 /* Network Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,22 +138,6 @@
 				937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */,
 			);
 			path = "Network Services";
-
-		5DD7C13323274418FDA427FD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				269E1170668DF6CABFDC1551 /* Pods-Hackathon2019~Work4NYC.debug.xcconfig */,
-				ACAF4A66788EBB418ABE71A6 /* Pods-Hackathon2019~Work4NYC.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D6AE331477947451943B9E7F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				42B9522A39F228B3A7D9120B /* Pods_Hackathon2019_Work4NYC.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,11 +147,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047DAB75224BD45500E2B1EA /* Build configuration list for PBXNativeTarget "Hackathon2019~Work4NYC" */;
 			buildPhases = (
-				0D8D9FB3ABF5691B1995B7B8 /* [CP] Check Pods Manifest.lock */,
 				047DAB5F224BD45200E2B1EA /* Sources */,
 				047DAB60224BD45200E2B1EA /* Frameworks */,
 				047DAB61224BD45200E2B1EA /* Resources */,
-				FC57D0487A7FF4C287FFE8D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,55 +204,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0D8D9FB3ABF5691B1995B7B8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon2019~Work4NYC-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC57D0487A7FF4C287FFE8D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon2019~Work4NYC/Pods-Hackathon2019~Work4NYC-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon2019~Work4NYC/Pods-Hackathon2019~Work4NYC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		047DAB5F224BD45200E2B1EA /* Sources */ = {
@@ -441,7 +360,6 @@
 		};
 		047DAB76224BD45500E2B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 269E1170668DF6CABFDC1551 /* Pods-Hackathon2019~Work4NYC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,7 +378,6 @@
 		};
 		047DAB77224BD45500E2B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACAF4A66788EBB418ABE71A6 /* Pods-Hackathon2019~Work4NYC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
