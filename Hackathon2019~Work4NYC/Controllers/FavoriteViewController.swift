@@ -10,6 +10,7 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
 let controlView = FavoriteView()
+var favoriteJobs = JobModel.getJob()
     var jobs = [Job]() {
         didSet{
             DispatchQueue.main.async {
@@ -34,8 +35,19 @@ let controlView = FavoriteView()
             }
         }
     }
+    func reload() {
+        favoriteJobs = JobModel.getJob()
+        controlView.favoriteView.reloadData()
+    }
     
-    @objc func 
+    @objc func deleteButtonPressed(sender: UIButton) {
+        let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
+            JobModel.deleteJob(index: sender.tag)
+            }
+        optionMenu.addAction(deleteAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 
 }
 
