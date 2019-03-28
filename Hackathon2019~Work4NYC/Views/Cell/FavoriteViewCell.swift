@@ -11,14 +11,17 @@ import UIKit
 class FavoriteViewCell: UITableViewCell {
     public lazy var titleLabel : UILabel = {
        var titleLabel = UILabel()
+        titleLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
        return titleLabel
     }()
     public lazy var locationLabel : UILabel = {
         var locationLabel = UILabel()
+        locationLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return locationLabel
     }()
     public lazy var salaryLabel : UILabel = {
         var salaryLabel = UILabel()
+        salaryLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return salaryLabel
     }()
     public lazy var deleteButton: UIButton = {

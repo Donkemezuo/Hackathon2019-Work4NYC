@@ -21,10 +21,14 @@ var favoriteJobs = JobModel.getJob()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(controlView)
-        view.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.2261782289, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         controlView.favoriteView.delegate = self
         controlView.favoriteView.dataSource = self
         populateData(keyword: "")
+        reload()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         reload()
     }
     func populateData(keyword: String) {
@@ -39,6 +43,8 @@ var favoriteJobs = JobModel.getJob()
         let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
             JobModel.deleteJob(index: sender.tag)
+            self.jobs.remove(at: sender.tag)
+            self.reload()
             }
         optionMenu.addAction(deleteAction)
         self.present(optionMenu, animated: true, completion: nil)
@@ -57,8 +63,10 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         favoriteCell.locationLabel.text = job.work_location
         favoriteCell.salaryLabel.text = job.salary_range_from
         favoriteCell.titleLabel.text = job.business_title
+        favoriteCell.deleteButton.tag = indexPath.row
         favoriteCell.deleteButton.setTitle("Delete Job", for: .normal)
-        favoriteCell.backgroundColor = .clear
+        favoriteCell.deleteButton.addTarget(self, action: #selector(deleteButtonPressed(sender:)), for: .touchUpInside)
+        favoriteCell.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         favoriteCell.layer.borderWidth = 2
         favoriteCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         favoriteCell.layer.cornerRadius = 5
