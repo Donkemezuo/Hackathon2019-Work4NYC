@@ -60,7 +60,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return 160
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "DetailSegue", sender: self)
         let detailVC = DetailViewController()
         detailVC.job = self.jobs[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)

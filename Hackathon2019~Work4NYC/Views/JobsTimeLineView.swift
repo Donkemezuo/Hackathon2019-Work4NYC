@@ -33,10 +33,12 @@ class JobsTimeLineView: UIView {
         return disLikeButton
     }()
     
-    public lazy var searchJobButton: UIButton = {
-        let searchButton = UIButton()
-        searchButton.setTitle("Search Jobs", for: .normal)
-        searchButton.titleLabel?.text = "Search Jobs"
+    public lazy var searchJobButton: UILabel = {
+        let searchButton = UILabel()
+        searchButton.textColor = UIColor.blue.withAlphaComponent(0.8)
+        searchButton.text = "Search Jobs"
+        searchButton.textAlignment = .right
+        searchButton.font = UIFont.boldSystemFont(ofSize: 20)
         return searchButton
     }()
     
@@ -63,7 +65,7 @@ class JobsTimeLineView: UIView {
     private func setConstrains() {
         setSearchJobsButtonConstrains()
        setCollectionViewConstrains()
-           setupDislikeButtonConstrains()
+        setupDislikeButtonConstrains()
        setupLikeButtonConstrains()
     
         
@@ -72,11 +74,9 @@ class JobsTimeLineView: UIView {
     private func setSearchJobsButtonConstrains(){
         addSubview(searchJobButton)
         searchJobButton.translatesAutoresizingMaskIntoConstraints = false
-        searchJobButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
-        searchJobButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 400).isActive = true
-        searchJobButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5).isActive = true
-        searchJobButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        searchJobButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        searchJobButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 200).isActive = true
+        searchJobButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
     }
     
     private func setCollectionViewConstrains(){
@@ -104,7 +104,7 @@ class JobsTimeLineView: UIView {
         likeButton.translatesAutoresizingMaskIntoConstraints = false
         likeButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10).isActive = true
         likeButton.leadingAnchor.constraint(equalTo: disLikeButton.trailingAnchor, constant: 190).isActive = true
-        likeButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
+        likeButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -80).isActive = true
         likeButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
         likeButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
