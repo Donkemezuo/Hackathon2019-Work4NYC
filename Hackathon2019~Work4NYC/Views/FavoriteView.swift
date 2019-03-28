@@ -11,11 +11,12 @@ import UIKit
 class FavoriteView: UIView {
     public lazy var favoriteView: UITableView = {
         let favoriteTableView = UITableView()
+        favoriteTableView.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         return favoriteTableView
         }()
         override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        backgroundColor = .white
+        backgroundColor = .blue
         self.favoriteView.register(FavoriteViewCell.self, forCellReuseIdentifier: "FavoriteCell")
         commonInit()
         }
@@ -24,7 +25,7 @@ class FavoriteView: UIView {
         commonInit()
     }
         func commonInit(){
-        backgroundColor = .white
+        backgroundColor = .blue
         setupTableViewConstrains()
             
     }
