@@ -68,7 +68,8 @@ class JobsTimelineViewController: UIViewController {
         JobsTimelineViewController.quota += 1
         let indexPath = IndexPath(row: counter, section: 0)
         jobsTimelineView.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        //showAlert(title: "Job Liked", message: "Job saved")
+       let job = jobs[indexPath.row]
+        JobModel.addJob(job: job)
     }
     
     private func deleteJob(){

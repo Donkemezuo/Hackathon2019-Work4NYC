@@ -26,6 +26,7 @@ class JobsTimeLineView: UIView {
         likeButton.backgroundColor = .white
         likeButton.layer.cornerRadius = 10.0
         likeButton.setImage(UIImage.init(named: "icons8-checkmark_filled"), for: .normal)
+        likeButton.setTitleColor(.green, for: .selected)
         return likeButton
     }()
     
