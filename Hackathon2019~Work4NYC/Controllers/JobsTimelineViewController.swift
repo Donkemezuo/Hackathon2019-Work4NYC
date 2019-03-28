@@ -10,14 +10,27 @@ import UIKit
 
 class JobsTimelineViewController: UIViewController {
     let jobsTimelineView = JobsTimeLineView()
+    private  var tapGuesture: UITapGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(jobsTimelineView)
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.72706002, green: 0, blue: 0.1062836573, alpha: 1).withAlphaComponent(0.5)
         jobsTimelineView.collectionView.delegate = self
         jobsTimelineView.collectionView.dataSource = self
+        setupJobSearchAction()
     }
+    
+    private func setupJobSearchAction(){
+        jobsTimelineView.searchJobButton.isUserInteractionEnabled = true
+        tapGuesture = UITapGestureRecognizer(target: self, action: #selector(searchJobsButtonPressed))
+        jobsTimelineView.searchJobButton.addGestureRecognizer(tapGuesture)
+    }
+    
+    @objc private func searchJobsButtonPressed(){
+        navigationController?.pushViewController(SearchViewController(), animated: true)
+    }
+    
     }
 
 extension JobsTimelineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
