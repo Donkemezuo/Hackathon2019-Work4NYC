@@ -21,7 +21,7 @@ var favoriteJobs = JobModel.getJob()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(controlView)
-        view.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.2261782289, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         controlView.favoriteView.delegate = self
         controlView.favoriteView.dataSource = self
         populateData(keyword: "")
@@ -66,7 +66,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         favoriteCell.deleteButton.tag = indexPath.row
         favoriteCell.deleteButton.setTitle("Delete Job", for: .normal)
         favoriteCell.deleteButton.addTarget(self, action: #selector(deleteButtonPressed(sender:)), for: .touchUpInside)
-        favoriteCell.backgroundColor = .clear
+        favoriteCell.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         favoriteCell.layer.borderWidth = 2
         favoriteCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         favoriteCell.layer.cornerRadius = 5
