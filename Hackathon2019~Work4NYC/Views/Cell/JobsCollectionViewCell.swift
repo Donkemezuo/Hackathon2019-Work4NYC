@@ -12,21 +12,25 @@ class JobsCollectionViewCell: UICollectionViewCell {
     
     public lazy var jobPosition: UILabel = {
         let positionLabel = UILabel()
+        positionLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return positionLabel
     }()
     
     public lazy var jobLocation: UILabel = {
         let jobLocation = UILabel()
+        jobLocation.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return jobLocation
     }()
     
     public lazy var salary: UILabel = {
         let salary = UILabel()
+        salary.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return salary
     }()
     
     public lazy var postedDate: UILabel = {
         let postedDate = UILabel()
+        postedDate.font = UIFont(name: "Baskerville-Bold", size: 18)!
         return postedDate
     }()
     
@@ -60,7 +64,7 @@ class JobsCollectionViewCell: UICollectionViewCell {
         addSubview(jobPosition)
         jobPosition.translatesAutoresizingMaskIntoConstraints = false
         jobPosition.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
-        jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
         jobPosition.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true
         jobPosition.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
@@ -78,7 +82,7 @@ class JobsCollectionViewCell: UICollectionViewCell {
         addSubview(jobLocation)
         jobLocation.translatesAutoresizingMaskIntoConstraints = false
         jobLocation.topAnchor.constraint(equalTo: jobPosition.bottomAnchor, constant: 10).isActive = true
-        jobLocation.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        jobLocation.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
         jobLocation.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200).isActive = true
         jobLocation.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
@@ -87,7 +91,7 @@ class JobsCollectionViewCell: UICollectionViewCell {
         addSubview(salary)
         salary.translatesAutoresizingMaskIntoConstraints = false
         salary.topAnchor.constraint(equalTo: jobLocation.bottomAnchor, constant: 10).isActive = true
-        salary.leadingAnchor.constraint(equalTo: leadingAnchor,  constant: 5).isActive = true
+        salary.leadingAnchor.constraint(equalTo: leadingAnchor,  constant: 15).isActive = true
         salary.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true
         salary.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }

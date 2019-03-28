@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         detailView.titleLabel.text = job?.business_title
         detailView.companyName.text = job?.agency
         detailView.descriptionTextView.text = job?.job_description ?? "N/A"
-        detailView.salaryLabel.text = "Salary: (\(job?.salary_frequency ?? "N/A")), From: $\(job?.salary_range_from ?? "N/A")-$\(job?.salary_range_to ?? "N/A"))"
+        detailView.salaryLabel.text = "Salary: (\(job?.salary_frequency ?? "N/A")), From: $\(job?.salary_range_from ?? "N/A")-$\(job?.salary_range_to ?? "N/A")"
         if job?.full_time_part_time_indicator?.capitalized == "F" {
             detailView.scheduleTypeLabel.text = "Full-Time"
         } else if job?.full_time_part_time_indicator?.capitalized == "P" {
