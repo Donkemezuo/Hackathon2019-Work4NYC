@@ -10,21 +10,28 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    let profileView = ProfileView()
+    var setQuota = Double()
+    var quota = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.addSubview(profileView)
+        view.backgroundColor = .white
+        
+        profileView.delegate = self
+        profileView.timerCircle(strokeValue: CGFloat(quota), radius: view.bounds.width / 4)
+        //        setupView()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setQuotaCircle() {
+        profileView.shapeLayer.strokeEnd = CGFloat(quota / setQuota)
     }
-    */
+}
+
+extension ProfileViewController: StepperDelegate {
+    func stepperDidChangeValue(sender: UIStepper) {
+        setQuota = sender.value
+        profileView.setQuotaLabel.text = String(sender.value)
+        setQuotaCircle()
+    }
 
 }
