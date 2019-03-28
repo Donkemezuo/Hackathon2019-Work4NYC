@@ -25,6 +25,7 @@ class DetailView: UIView {
         label.backgroundColor = .white
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
+        label.numberOfLines = 0
         return label
     }()
     lazy var descriptionTextView: UITextView = {
@@ -49,6 +50,7 @@ class DetailView: UIView {
         label.backgroundColor = .white
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
+        label.textAlignment = .center
         return label
     }()
     lazy var nycGovButton: UIButton = {

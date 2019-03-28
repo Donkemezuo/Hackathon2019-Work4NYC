@@ -20,6 +20,13 @@ class WebViewController: UIViewController {
         } else {
             print("bad url")
         }
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if let url = URL(string: urlLink) {
+            let request = URLRequest(url: url)
+            webView.newView.load(request)
+        } else {
+            print("bad url")
+        }
     }
 }

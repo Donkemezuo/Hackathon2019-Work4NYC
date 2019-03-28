@@ -24,7 +24,11 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
-        JobAPIClient.getJobs(keyword: searchView.jobSearchBar.text ?? "") { (error, data) in
+        searchView.jobSearchBar.delegate = self
+        populateData(keyword: "")
+    }
+    func populateData(keyword: String) {
+        JobAPIClient.getJobs(keyword: keyword) { (error, data) in
             if let error = error {
                 print("Error getting data : \(error)")
             } else if let data = data {
@@ -43,7 +47,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         let job = jobs[indexPath.row]
         jobCell.jobLocation.text = job.work_location
         jobCell.jobPosition.text = job.business_title
-        jobCell.postedDate.text = ""
         jobCell.salary.text = job.salary_frequency
         jobCell.saveButton.setTitle("Save Job", for: .normal)
         jobCell.backgroundColor = .clear
@@ -56,7 +59,23 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "DetailSegue", sender: self)
+        let detailVC = DetailViewController()
+        detailVC.job = self.jobs[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
     
-    
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        populateData(keyword: searchBar.text ?? "")
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == "" {
+            populateData(keyword: "")
+        }
+    }
 }
 
