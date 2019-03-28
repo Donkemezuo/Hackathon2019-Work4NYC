@@ -10,7 +10,6 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
 let controlView = FavoriteView()
-//    var jobs = [Job]()
     var jobs = [Job]() {
         didSet{
             DispatchQueue.main.async {
@@ -35,6 +34,9 @@ let controlView = FavoriteView()
             }
         }
     }
+    
+    @objc func 
+
 }
 
 extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
@@ -64,3 +66,4 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
