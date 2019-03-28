@@ -23,7 +23,7 @@ class SearchViewController: UIViewController {
     }
     override func viewDidLoad() {
         view.addSubview(searchView)
-        view.backgroundColor = #colorLiteral(red: 0.72706002, green: 0, blue: 0.1062836573, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
@@ -87,11 +87,17 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         populateData(keyword: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
             populateData(keyword: "")
+            searchBar.resignFirstResponder()
         }
+    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
     }
 }
 

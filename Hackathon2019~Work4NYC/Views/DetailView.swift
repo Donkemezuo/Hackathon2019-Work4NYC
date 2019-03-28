@@ -13,7 +13,7 @@ class DetailView: UIView {
        let label = UILabel()
         label.text = "Agency Name"
         label.textAlignment = .center
-        label.backgroundColor = .gray
+        label.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
         return label
@@ -103,7 +103,7 @@ class DetailView: UIView {
     }()
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        self.backgroundColor = .lightGray
+        self.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         setupConstraints()
     }
     required init?(coder aDecoder: NSCoder) {
@@ -151,7 +151,7 @@ extension DetailView {
             descriptionTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 20),
             descriptionTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 11),
             descriptionTextView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -11),
-            descriptionTextView.heightAnchor.constraint(equalToConstant: 300)
+            descriptionTextView.heightAnchor.constraint(equalToConstant: 200)
             ])
     }
     private func setupSalaryLabel() {
