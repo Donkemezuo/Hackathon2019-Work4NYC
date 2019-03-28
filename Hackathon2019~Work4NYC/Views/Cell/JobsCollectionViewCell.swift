@@ -12,27 +12,27 @@ class JobsCollectionViewCell: UICollectionViewCell {
     
     public lazy var jobPosition: UILabel = {
         let positionLabel = UILabel()
-        positionLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        positionLabel.font = UIFont(name: "Helvetica", size: 18)!
         positionLabel.numberOfLines = 0
         return positionLabel
     }()
     
     public lazy var jobLocation: UILabel = {
         let jobLocation = UILabel()
-        jobLocation.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        jobLocation.font = UIFont(name: "Helvetica", size: 18)!
         jobLocation.adjustsFontSizeToFitWidth = true
         return jobLocation
     }()
     
     public lazy var salary: UILabel = {
         let salary = UILabel()
-        salary.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        salary.font = UIFont(name: "Helvetica", size: 18)!
         return salary
     }()
     
     public lazy var postedDate: UILabel = {
         let postedDate = UILabel()
-        postedDate.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        postedDate.font = UIFont(name: "Helvetica", size: 18)!
         return postedDate
     }()
     
@@ -76,7 +76,7 @@ class JobsCollectionViewCell: UICollectionViewCell {
     private func setupJobPositionConstrains(){
         addSubview(jobPosition)
         jobPosition.translatesAutoresizingMaskIntoConstraints = false
-        jobPosition.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        jobPosition.topAnchor.constraint(equalTo: topAnchor, constant: 45).isActive = true
         jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
         jobPosition.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }

@@ -12,20 +12,20 @@ class JobTableViewCell: UITableViewCell {
     public lazy var jobPosition: UILabel = {
         let positionLabel = UILabel()
         positionLabel.numberOfLines = 0
-        positionLabel.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        positionLabel.font = UIFont(name: "Helvetica", size: 18)!
         return positionLabel
     }()
     
     public lazy var jobLocation: UILabel = {
         let jobLocation = UILabel()
         jobLocation.numberOfLines = 0
-        jobLocation.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        jobLocation.font = UIFont(name: "Helvetica", size: 18)!
         return jobLocation
     }()
     
     public lazy var salary: UILabel = {
         let salary = UILabel()
-        salary.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        salary.font = UIFont(name: "Helvetica", size: 18)!
         return salary
     }()
     
@@ -36,7 +36,7 @@ class JobTableViewCell: UITableViewCell {
     
     public lazy var saveButton: UIButton = {
         let saveButton = UIButton()
-        saveButton.titleLabel?.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        saveButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)!
         return saveButton
     }()
     
