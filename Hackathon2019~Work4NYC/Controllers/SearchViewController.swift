@@ -23,7 +23,7 @@ class SearchViewController: UIViewController {
     }
     override func viewDidLoad() {
         view.addSubview(searchView)
-        view.backgroundColor = #colorLiteral(red: 0.72706002, green: 0, blue: 0.1062836573, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
@@ -31,7 +31,16 @@ class SearchViewController: UIViewController {
         searchView.delegate = self
     }
     
-
+    @objc func saveButtonPressed(sender: UIButton) {
+        let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        let saveAction = UIAlertAction(title: "Save", style: .destructive) { (UIAlertAction) in
+            let job = Job(agency: "g", business_title: "g", job_description: "g", job_id: "g", full_time_part_time_indicator: "g", minimum_qual_requirements: "G", salary_frequency: "g", salary_range_from: "g", salary_range_to: "G", work_location: "g")
+            JobModel.addJob(job: job)
+            
+        }
+        optionMenu.addAction(saveAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 
 }
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -78,11 +87,17 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         populateData(keyword: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
             populateData(keyword: "")
+            searchBar.resignFirstResponder()
         }
+    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
     }
 }
 

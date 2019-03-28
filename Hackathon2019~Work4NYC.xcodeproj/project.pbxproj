@@ -31,8 +31,6 @@
 		047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */; };
 		047DAB8D224C0E5500E2B1EA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */; };
 		75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */; };
-		937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE766224C176300B2B9D1 /* WebViewController.swift */; };
-		937EE769224C177000B2B9D1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE768224C177000B2B9D1 /* WebView.swift */; };
 		937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76A224C32FB00B2B9D1 /* AppError.swift */; };
 		937EE76D224C33A700B2B9D1 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */; };
 		937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */; };
@@ -65,8 +63,6 @@
 		047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingModel.swift; sourceTree = "<group>"; };
 		047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
-		937EE766224C176300B2B9D1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		937EE768224C177000B2B9D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		937EE76A224C32FB00B2B9D1 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPIClient.swift; sourceTree = "<group>"; };
@@ -135,7 +131,6 @@
 				047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */,
 				047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */,
 				047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */,
-				937EE766224C176300B2B9D1 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,9 +144,9 @@
 				041BAFD4224D226D00D86919 /* ProfileView.swift */,
 				047DAB84224BF67200E2B1EA /* FilterView.swift */,
 				047DAB86224BF68300E2B1EA /* FavoriteView.swift */,
+
 				041BAFC7224D108800D86919 /* JobsTimeLineView.swift */,
 				041BAFD6224D42BF00D86919 /* ReminderView.swift */,
-				937EE768224C177000B2B9D1 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,10 +251,10 @@
 			files = (
 				047DAB79224BD4FC00E2B1EA /* DetailViewController.swift in Sources */,
 				937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */,
+
 				041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */,
 				041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */,
 				041BAFD9224D42D100D86919 /* ReminderViewController.swift in Sources */,
-				937EE767224C176300B2B9D1 /* WebViewController.swift in Sources */,
 				041BAFDB224D45CE00D86919 /* UIAlert+Extension.swift in Sources */,
 				937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */,
 				047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */,
@@ -271,10 +266,12 @@
 				047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */,
 				047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */,
 				047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */,
+
 				041BAFD3224D225100D86919 /* ProfileViewController.swift in Sources */,
 				041BAFD7224D42C000D86919 /* ReminderView.swift in Sources */,
 				041BAFD5224D226D00D86919 /* ProfileView.swift in Sources */,
-				937EE769224C177000B2B9D1 /* WebView.swift in Sources */,
+
+
 				75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */,
 				041BAFD1224D21E800D86919 /* JobModel.swift in Sources */,
 				041BAFCC224D1D7E00D86919 /* JobsCollectionViewCell.swift in Sources */,

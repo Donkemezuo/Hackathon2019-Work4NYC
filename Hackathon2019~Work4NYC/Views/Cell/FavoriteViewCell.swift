@@ -6,69 +6,75 @@
 //  Copyright © 2019 EnProTech Group. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class FavoriteViewCell: UITableViewCell {
-    var titleLabel : UILabel = {
+    public lazy var titleLabel : UILabel = {
        var titleLabel = UILabel()
-       titleLabel.translatesAutoresizingMaskIntoConstraints = false
        return titleLabel
     }()
-    var locationLabel : UILabel = {
+    public lazy var locationLabel : UILabel = {
         var locationLabel = UILabel()
         return locationLabel
     }()
-    var salaryLabel : UILabel = {
+    public lazy var salaryLabel : UILabel = {
         var salaryLabel = UILabel()
         return salaryLabel
     }()
-    
+    public lazy var deleteButton: UIButton = {
+        let deleteButton = UIButton()
+        deleteButton.backgroundColor = .blue
+        return deleteButton
+    }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
         }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.commonInit()
+        commonInit()
         fatalError("error")
     }
     private func commonInit() {
         setupLocationLabel()
         setupSalaryLabel()
         setupTitleLabel()
+        setupDeleteButton()
     }
     private func setupLocationLabel() {
         addSubview(locationLabel)
         locationLabel.translatesAutoresizingMaskIntoConstraints = false
-//        locationLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95).isActive = true
-//        locationLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30)
-        locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
-        locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100)
+        locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true
         locationLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
 
     }
     private func setupSalaryLabel() {
         addSubview(salaryLabel)
         salaryLabel.translatesAutoresizingMaskIntoConstraints = false
-//        salaryLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.90).isActive = true
-//        salaryLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        salaryLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10)
-        salaryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
-        salaryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200)
+        salaryLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 10).isActive = true
+        salaryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        salaryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200).isActive = true
         salaryLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
 
     }
     private func setupTitleLabel() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//        titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
-//        titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20)
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
-        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -150)
+        titleLabel.topAnchor.constraint(equalTo: salaryLabel.bottomAnchor, constant: 10).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100).isActive = true 
         titleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-
+    }
+    private func setupDeleteButton() {
+        addSubview(deleteButton)
+        
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        deleteButton.topAnchor.constraint(equalTo: salaryLabel.bottomAnchor, constant: 10).isActive = true
+        deleteButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
+        deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        deleteButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
     }
 }
