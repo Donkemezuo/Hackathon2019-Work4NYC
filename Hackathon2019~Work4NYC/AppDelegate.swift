@@ -19,14 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let savedJobsVC = UINavigationController.init(rootViewController: FavoriteViewController())
         _ = UINavigationController.init(rootViewController: FilterViewController())
         let jobsTimeLineVC = UINavigationController.init(rootViewController: JobsTimelineViewController())
+        let profile = ProfileViewController()
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [jobsTimeLineVC, savedJobsVC]
+        tabBar.viewControllers = [jobsTimeLineVC, savedJobsVC, profile]
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = tabBar
         jobsTimeLineVC.tabBarItem = UITabBarItem.init(title: "Jobs", image: UIImage.init(named: "icons8-worker_filled"), tag: 0)
         searchVC.tabBarItem = UITabBarItem.init(title: "Job Search", image: UIImage.init(named: "icons8-job_filled"), tag: 0)
         savedJobsVC.tabBarItem = UITabBarItem.init(title: "Saved Jobs", image: UIImage.init(named: "icons8-save_search_filled"), tag: 1)
+        profile.tabBarItem = UITabBarItem.init(title: "Profile", image: UIImage.init(named: "icons8-user"), tag: 2)
 
         return true
     }
