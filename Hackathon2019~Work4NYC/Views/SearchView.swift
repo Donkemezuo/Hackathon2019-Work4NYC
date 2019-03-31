@@ -22,7 +22,7 @@ class SearchView: UIView {
     let filterButton =  UIButton()
         filterButton.titleLabel?.textColor = .blue
         filterButton.setTitle("Customize Search", for: .normal)
-        filterButton.titleLabel?.font = UIFont(name: "Baskerville-Bold", size: 18)!
+        filterButton.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)!
         filterButton.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
         filterButton.addTarget(self, action: #selector(filterButtonPressed), for: .touchUpInside)
         return filterButton

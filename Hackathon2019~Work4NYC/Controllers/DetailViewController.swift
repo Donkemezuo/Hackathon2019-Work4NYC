@@ -21,6 +21,8 @@ class DetailViewController: UIViewController {
         detailView.indeedButton.addTarget(self, action: #selector(indeedSegue), for: .touchUpInside)
         detailView.linkedInButton.addTarget(self, action: #selector(linkedInSegue), for: .touchUpInside)
         updateUI()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "reminder"), style: .plain, target: self, action: #selector(reminderPressed))
+        
     }
     private func updateUI() {
         detailView.titleLabel.text = job?.business_title
@@ -62,5 +64,10 @@ class DetailViewController: UIViewController {
         let urlLink = "https://www.linkedin.com/jobs/search?keywords=\(keyword!)&pageNum=0&position=1"
         let safariVC = SFSafariViewController(url: URL(string: urlLink)!)
         present(safariVC, animated: true)
+    }
+    @objc func reminderPressed() {
+        let reminderVC = ReminderViewController()
+        reminderVC.job = job
+        present(reminderVC, animated: true)
     }
 }

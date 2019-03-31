@@ -12,6 +12,7 @@ class DetailView: UIView {
     lazy var companyName: UILabel = {
        let label = UILabel()
         label.text = "Agency Name"
+        label.font = UIFont(name: "Helvetica-Bold", size: 18)!
         label.textAlignment = .center
         label.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         label.layer.masksToBounds = true
@@ -21,6 +22,8 @@ class DetailView: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Job Title"
+        label.font = UIFont(name: "Helvetica-Bold", size: 18)!
+        label.font = UIFont(name: "Helvetica", size: 18)!
         label.textAlignment = .center
         label.backgroundColor = .white
         label.layer.masksToBounds = true
@@ -38,6 +41,7 @@ class DetailView: UIView {
     }()
     lazy var salaryLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 18)!
         label.text = "Salary Label"
         label.backgroundColor = .white
         label.layer.masksToBounds = true
@@ -46,6 +50,7 @@ class DetailView: UIView {
     }()
     lazy var scheduleTypeLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 18)!
         label.text = "Schedule Type"
         label.backgroundColor = .white
         label.layer.masksToBounds = true
@@ -63,6 +68,7 @@ class DetailView: UIView {
         button.layer.cornerRadius = 10.0
         button.backgroundColor = .white
         button.isEnabled = true
+        button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)!
         return button
     }()
     lazy var monsterButton: UIButton = {
@@ -74,6 +80,7 @@ class DetailView: UIView {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10.0
         button.backgroundColor = .white
+        button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)!
         button.isEnabled = true
         return button
     }()
@@ -85,6 +92,7 @@ class DetailView: UIView {
         button.setTitleColor(.black, for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10.0
+        button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)!
         button.backgroundColor = .white
         button.isEnabled = true
         return button
@@ -97,6 +105,7 @@ class DetailView: UIView {
         button.setTitleColor(.black, for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10.0
+        button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)!
         button.backgroundColor = .white
         button.isEnabled = true
         return button

@@ -11,14 +11,17 @@ import UIKit
 class FavoriteViewCell: UITableViewCell {
     public lazy var titleLabel : UILabel = {
        var titleLabel = UILabel()
+        titleLabel.font = UIFont(name: "Helvetica", size: 18)!
        return titleLabel
     }()
     public lazy var locationLabel : UILabel = {
         var locationLabel = UILabel()
+        locationLabel.font = UIFont(name: "Helvetica", size: 18)!
         return locationLabel
     }()
     public lazy var salaryLabel : UILabel = {
         var salaryLabel = UILabel()
+        salaryLabel.font = UIFont(name: "Helvetica", size: 18)!
         return salaryLabel
     }()
     public lazy var deleteButton: UIButton = {
@@ -75,6 +78,9 @@ class FavoriteViewCell: UITableViewCell {
         deleteButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
         deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         deleteButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
     }
-}
+        @objc func deleteButtonPressed(sender: UIButton) {
+            JobModel.deleteJob(index: sender.tag)
+        }
+    }
+
