@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.jobsTableView.delegate = self
         searchView.jobsTableView.dataSource = self
+        searchView.jobSearchBar.delegate = self
         populateData(keyword: "")
         searchView.delegate = self
     }

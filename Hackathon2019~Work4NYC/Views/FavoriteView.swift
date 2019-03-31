@@ -11,11 +11,12 @@ import UIKit
 class FavoriteView: UIView {
     public lazy var favoriteView: UITableView = {
         let favoriteTableView = UITableView()
+        favoriteTableView.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         return favoriteTableView
         }()
         override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        backgroundColor = .white
+        backgroundColor = .blue
         self.favoriteView.register(FavoriteViewCell.self, forCellReuseIdentifier: "FavoriteCell")
         commonInit()
         }
@@ -24,43 +25,11 @@ class FavoriteView: UIView {
         commonInit()
     }
         func commonInit(){
-        backgroundColor = .white
+        backgroundColor = .blue
         setupTableViewConstrains()
             
     }
-//    func anchor (top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?, paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat, height: CGFloat, enableInsets: Bool) {
-//        var topInset = CGFloat(0)
-//        var bottomInset = CGFloat(0)
-//
-//        if #available(iOS 11, *), enableInsets {
-//            let insets = self.safeAreaInsets
-//            topInset = insets.top
-//            bottomInset = insets.bottom
-//
-//            print("Top: \(topInset)")
-//            print("Bottom: \(bottomInset)")
-//        }
-//
-//        translatesAutoresizingMaskIntoConstraints = false
-//
-//        if let top = top {
-//            self.topAnchor.constraint(equalTo: top, constant: paddingTop+topInset).isActive = true
-//        }
-//        if let left = left {
-//            self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
-//        }
-//        if let right = right {
-//            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
-//        }
-//        if let bottom = bottom {
-//            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom-bottomInset).isActive = true
-//        }
-//        if height != 0 {
-//            heightAnchor.constraint(equalToConstant: height).isActive = true
-//        }
-//        if width != 0 {
-//            widthAnchor.constraint(equalToConstant: width).isActive = true
-//        }
+
     private func setupTableViewConstrains(){
         addSubview(favoriteView)
         favoriteView.translatesAutoresizingMaskIntoConstraints = false
