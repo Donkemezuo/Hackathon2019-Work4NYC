@@ -15,3 +15,14 @@ With #Work4NYCApp, User;
 - can set daily job application target and track progress
 - can delete jobs from saved folder
 
+# Built With
+- UIKit
+
+# Prerequisites
+- Xcode - 9.0+, set up on Swift Language
+- iOS 8.0+ / Mac OS X 10.11+ / tvOS 9.0+
+- Swift 4.0+
+
+# Group Members
+- Donkemezuo Raymond Tariladou https://github.com/Donkemezuo
+- Alfredo https://github.com/AlfredoB212
