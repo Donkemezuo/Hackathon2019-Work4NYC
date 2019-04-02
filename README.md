@@ -23,6 +23,10 @@ With #Work4NYCApp, User;
 - iOS 8.0+ / Mac OS X 10.11+ / tvOS 9.0+
 - Swift 4.0+
 
+# Gif
+
+![gif](https://github.com/Donkemezuo/Hackathon2019-Work4NYC/blob/QA/Images/Work4NYCSearchGiphy.gif)
+
 # Group Members
 - Donkemezuo Raymond Tariladou https://github.com/Donkemezuo
 - Alfredo https://github.com/AlfredoB212
