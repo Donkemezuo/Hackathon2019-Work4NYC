@@ -26,6 +26,7 @@ With #Work4NYCApp, User;
 # Gif
 
 ![gif](https://github.com/Donkemezuo/Hackathon2019-Work4NYC/blob/QA/Images/Work4NYCSearchGiphy.gif)
+![gif](https://github.com/Donkemezuo/Hackathon2019-Work4NYC/blob/QA/Images/Work4NYCgiphy.gif)
 
 # Group Members
 - Donkemezuo Raymond Tariladou https://github.com/Donkemezuo
