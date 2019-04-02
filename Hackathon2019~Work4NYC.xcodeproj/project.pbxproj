@@ -7,27 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041BAFC8224D108800D86919 /* JobsTimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFC7224D108800D86919 /* JobsTimeLineView.swift */; };
+		041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */; };
+		041BAFCC224D1D7E00D86919 /* JobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */; };
+		041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */; };
+		041BAFD1224D21E800D86919 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD0224D21E800D86919 /* JobModel.swift */; };
+		041BAFD3224D225100D86919 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD2224D225100D86919 /* ProfileViewController.swift */; };
+		041BAFD5224D226D00D86919 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD4224D226D00D86919 /* ProfileView.swift */; };
+		041BAFD7224D42C000D86919 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD6224D42BF00D86919 /* ReminderView.swift */; };
+		041BAFD9224D42D100D86919 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFD8224D42D100D86919 /* ReminderViewController.swift */; };
+		041BAFDB224D45CE00D86919 /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BAFDA224D45CE00D86919 /* UIAlert+Extension.swift */; };
 		047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB66224BD45200E2B1EA /* AppDelegate.swift */; };
 		047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB68224BD45200E2B1EA /* SearchViewController.swift */; };
-		047DAB6C224BD45200E2B1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047DAB6A224BD45200E2B1EA /* Main.storyboard */; };
 		047DAB6E224BD45500E2B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047DAB6D224BD45500E2B1EA /* Assets.xcassets */; };
 		047DAB71224BD45500E2B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047DAB6F224BD45500E2B1EA /* LaunchScreen.storyboard */; };
 		047DAB79224BD4FC00E2B1EA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */; };
 		047DAB7B224BD52000E2B1EA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */; };
 		047DAB7D224BD53400E2B1EA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */; };
+		047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB80224BF64800E2B1EA /* SearchView.swift */; };
+		047DAB83224BF66500E2B1EA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB82224BF66500E2B1EA /* DetailView.swift */; };
+		047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB84224BF67200E2B1EA /* FilterView.swift */; };
+		047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB86224BF68300E2B1EA /* FavoriteView.swift */; };
+		047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */; };
+		047DAB8D224C0E5500E2B1EA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */; };
+		75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */; };
+		937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76A224C32FB00B2B9D1 /* AppError.swift */; };
+		937EE76D224C33A700B2B9D1 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */; };
+		937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041BAFC7224D108800D86919 /* JobsTimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTimeLineView.swift; sourceTree = "<group>"; };
+		041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTimelineViewController.swift; sourceTree = "<group>"; };
+		041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewCell.swift; sourceTree = "<group>"; };
+		041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		041BAFD0224D21E800D86919 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		041BAFD2224D225100D86919 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		041BAFD4224D226D00D86919 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		041BAFD6224D42BF00D86919 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		041BAFD8224D42D100D86919 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		041BAFDA224D45CE00D86919 /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
 		047DAB63224BD45200E2B1EA /* Hackathon2019~Work4NYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon2019~Work4NYC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047DAB66224BD45200E2B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047DAB68224BD45200E2B1EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		047DAB6B224BD45200E2B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047DAB6D224BD45500E2B1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047DAB70224BD45500E2B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047DAB72224BD45500E2B1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		047DAB80224BF64800E2B1EA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		047DAB82224BF66500E2B1EA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		047DAB84224BF67200E2B1EA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		047DAB86224BF68300E2B1EA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingModel.swift; sourceTree = "<group>"; };
+		047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
+		937EE76A224C32FB00B2B9D1 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041BAFCD224D217800D86919 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				041BAFCE224D21A400D86919 /* DataPersistenceManager.swift */,
+				041BAFDA224D45CE00D86919 /* UIAlert+Extension.swift */,
+				041BAFD0224D21E800D86919 /* JobModel.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		047DAB5A224BD45200E2B1EA = {
 			isa = PBXGroup;
 			children = (
@@ -60,17 +108,75 @@
 		047DAB65224BD45200E2B1EA /* Hackathon2019~Work4NYC */ = {
 			isa = PBXGroup;
 			children = (
+				041BAFCD224D217800D86919 /* SupportingFiles */,
+				047DAB88224BF9EA00E2B1EA /* Models */,
+				047DAB7F224BF60900E2B1EA /* Views */,
+				047DAB7E224BF5E700E2B1EA /* Controllers */,
+				937EE76E224C33C300B2B9D1 /* Network Services */,
 				047DAB66224BD45200E2B1EA /* AppDelegate.swift */,
-				047DAB68224BD45200E2B1EA /* SearchViewController.swift */,
-				047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */,
-				047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */,
-				047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */,
-				047DAB6A224BD45200E2B1EA /* Main.storyboard */,
 				047DAB6D224BD45500E2B1EA /* Assets.xcassets */,
 				047DAB6F224BD45500E2B1EA /* LaunchScreen.storyboard */,
 				047DAB72224BD45500E2B1EA /* Info.plist */,
 			);
 			path = "Hackathon2019~Work4NYC";
+			sourceTree = "<group>";
+		};
+		047DAB7E224BF5E700E2B1EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				041BAFC9224D10BE00D86919 /* JobsTimelineViewController.swift */,
+				041BAFD2224D225100D86919 /* ProfileViewController.swift */,
+				047DAB68224BD45200E2B1EA /* SearchViewController.swift */,
+				041BAFD8224D42D100D86919 /* ReminderViewController.swift */,
+				047DAB78224BD4FC00E2B1EA /* DetailViewController.swift */,
+				047DAB7A224BD51F00E2B1EA /* FilterViewController.swift */,
+				047DAB7C224BD53400E2B1EA /* FavoriteViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		047DAB7F224BF60900E2B1EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047DAB8B224C0E0400E2B1EA /* Cell */,
+				047DAB80224BF64800E2B1EA /* SearchView.swift */,
+				047DAB82224BF66500E2B1EA /* DetailView.swift */,
+				041BAFD4224D226D00D86919 /* ProfileView.swift */,
+				047DAB84224BF67200E2B1EA /* FilterView.swift */,
+				047DAB86224BF68300E2B1EA /* FavoriteView.swift */,
+
+				041BAFC7224D108800D86919 /* JobsTimeLineView.swift */,
+				041BAFD6224D42BF00D86919 /* ReminderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		047DAB88224BF9EA00E2B1EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				047DAB89224BFA1D00E2B1EA /* JobPostingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		047DAB8B224C0E0400E2B1EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				047DAB8C224C0E5500E2B1EA /* JobTableViewCell.swift */,
+				041BAFCB224D1D7E00D86919 /* JobsCollectionViewCell.swift */,
+				75A4F917224C161A0008EE47 /* FavoriteViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		937EE76E224C33C300B2B9D1 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				937EE76A224C32FB00B2B9D1 /* AppError.swift */,
+				937EE76C224C33A700B2B9D1 /* NetworkHelper.swift */,
+				937EE76F224C33E600B2B9D1 /* JobAPIClient.swift */,
+			);
+			path = "Network Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +239,6 @@
 			files = (
 				047DAB71224BD45500E2B1EA /* LaunchScreen.storyboard in Resources */,
 				047DAB6E224BD45500E2B1EA /* Assets.xcassets in Resources */,
-				047DAB6C224BD45200E2B1EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,24 +250,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				047DAB79224BD4FC00E2B1EA /* DetailViewController.swift in Sources */,
+				937EE770224C33E600B2B9D1 /* JobAPIClient.swift in Sources */,
+
+				041BAFCA224D10BE00D86919 /* JobsTimelineViewController.swift in Sources */,
+				041BAFCF224D21A400D86919 /* DataPersistenceManager.swift in Sources */,
+				041BAFD9224D42D100D86919 /* ReminderViewController.swift in Sources */,
+				041BAFDB224D45CE00D86919 /* UIAlert+Extension.swift in Sources */,
+				937EE76B224C32FB00B2B9D1 /* AppError.swift in Sources */,
 				047DAB69224BD45200E2B1EA /* SearchViewController.swift in Sources */,
 				047DAB7B224BD52000E2B1EA /* FilterViewController.swift in Sources */,
+				047DAB83224BF66500E2B1EA /* DetailView.swift in Sources */,
+				047DAB8D224C0E5500E2B1EA /* JobTableViewCell.swift in Sources */,
+				047DAB8A224BFA1D00E2B1EA /* JobPostingModel.swift in Sources */,
+				937EE76D224C33A700B2B9D1 /* NetworkHelper.swift in Sources */,
+				047DAB85224BF67200E2B1EA /* FilterView.swift in Sources */,
 				047DAB67224BD45200E2B1EA /* AppDelegate.swift in Sources */,
+				047DAB81224BF64800E2B1EA /* SearchView.swift in Sources */,
+
+				041BAFD3224D225100D86919 /* ProfileViewController.swift in Sources */,
+				041BAFD7224D42C000D86919 /* ReminderView.swift in Sources */,
+				041BAFD5224D226D00D86919 /* ProfileView.swift in Sources */,
+
+
+				75A4F918224C161A0008EE47 /* FavoriteViewCell.swift in Sources */,
+				041BAFD1224D21E800D86919 /* JobModel.swift in Sources */,
+				041BAFCC224D1D7E00D86919 /* JobsCollectionViewCell.swift in Sources */,
+				047DAB87224BF68300E2B1EA /* FavoriteView.swift in Sources */,
 				047DAB7D224BD53400E2B1EA /* FavoriteViewController.swift in Sources */,
+				041BAFC8224D108800D86919 /* JobsTimeLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		047DAB6A224BD45200E2B1EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				047DAB6B224BD45200E2B1EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		047DAB6F224BD45500E2B1EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,7 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 697KD42Z5Z;
+				DEVELOPMENT_TEAM = DQ5CF8LT37;
 				INFOPLIST_FILE = "Hackathon2019~Work4NYC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,7 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 697KD42Z5Z;
+				DEVELOPMENT_TEAM = DQ5CF8LT37;
 				INFOPLIST_FILE = "Hackathon2019~Work4NYC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

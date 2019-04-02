@@ -1,0 +1,127 @@
+//
+//  ViewController.swift
+//  Hackathon2019~Work4NYC
+//
+//  Created by Donkemezuo Raymond Tariladou on 3/27/19.
+//  Copyright © 2019 EnProTech Group. All rights reserved.
+//
+
+import UIKit
+
+protocol FilterVCDelegate: AnyObject {
+    func filterWereSelected(salaryType: String?, scheduleType: String?)
+}
+class SearchViewController: UIViewController {
+    let searchView = SearchView()
+
+    var jobs = [Job]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.searchView.jobsTableView.reloadData()
+            }
+        }
+    }
+    override func viewDidLoad() {
+        view.addSubview(searchView)
+        view.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
+        super.viewDidLoad()
+        searchView.jobsTableView.delegate = self
+        searchView.jobsTableView.dataSource = self
+        searchView.jobSearchBar.delegate = self
+        populateData(keyword: "")
+        searchView.delegate = self
+    }
+    
+    @objc func saveButtonPressed(sender: UIButton) {
+        let optionMenu = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        let saveAction = UIAlertAction(title: "Save", style: .destructive) { (UIAlertAction) in
+            let job = self.jobs[sender.tag]
+            JobModel.addJob(job: job)
+            
+        }
+        optionMenu.addAction(saveAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+
+}
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobs.count
+    }
+    func populateData(keyword: String) {
+        JobAPIClient.getJobs(keyword: keyword) { (error, data) in
+            if let error = error {
+                print("Error getting data : \(error)")
+            } else if let data = data {
+                self.jobs = data
+            }
+        }
+    }
+
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let jobCell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as? JobTableViewCell else {return UITableViewCell()}
+        let job = jobs[indexPath.row]
+        jobCell.jobLocation.text = job.work_location
+        jobCell.jobPosition.text = job.business_title
+        jobCell.salary.text = job.salary_frequency
+        jobCell.saveButton.setTitle("Save Job", for: .normal)
+        jobCell.saveButton.tag = indexPath.row
+        jobCell.saveButton.addTarget(self, action: #selector(saveButtonPressed(sender:)), for: .touchUpInside)
+        jobCell.backgroundColor = .clear
+        jobCell.layer.borderWidth = 2
+        jobCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        jobCell.layer.cornerRadius = 5
+        return jobCell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.job = self.jobs[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        populateData(keyword: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == "" {
+            populateData(keyword: "")
+            searchBar.resignFirstResponder()
+        }
+    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
+    }
+}
+
+extension SearchViewController: FilterButtonDelegate{
+    func filterPressed() {
+        let filterVC = FilterViewController()
+        filterVC.filterDelegate = self
+        filterVC.modalPresentationStyle = .overFullScreen
+        present(filterVC, animated: true)
+    }
+}
+extension SearchViewController: FilterVCDelegate {
+    func filterWereSelected(salaryType: String?, scheduleType: String?) {
+        if let salaryType = salaryType {
+           jobs = jobs.filter{$0.salary_frequency == salaryType}
+        }
+        if let scheduleType = scheduleType {
+            jobs = jobs.filter{$0.full_time_part_time_indicator == scheduleType}
+        }
+        
+    }
+    
+    
+}
