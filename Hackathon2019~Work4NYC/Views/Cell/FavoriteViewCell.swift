@@ -36,6 +36,7 @@ class FavoriteViewCell: UITableViewCell {
         fatalError("error")
     }
     private func commonInit() {
+        self.backgroundColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         setupLocationLabel()
         setupSalaryLabel()
         setupTitleLabel()

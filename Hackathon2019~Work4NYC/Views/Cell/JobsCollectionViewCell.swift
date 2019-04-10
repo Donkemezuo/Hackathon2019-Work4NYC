@@ -78,7 +78,8 @@ class JobsCollectionViewCell: UICollectionViewCell {
         jobPosition.translatesAutoresizingMaskIntoConstraints = false
         jobPosition.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         jobPosition.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
-        jobPosition.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        jobPosition.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 5).isActive = true
+        jobPosition.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
     
     private func setupJobLocationConstrains(){

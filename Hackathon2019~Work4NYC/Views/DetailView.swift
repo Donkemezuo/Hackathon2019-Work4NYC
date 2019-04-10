@@ -40,6 +40,7 @@ class DetailView: UIView {
         let label = UILabel()
         label.text = "Salary Label"
         label.backgroundColor = .white
+        label.textAlignment = .center
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
         return label

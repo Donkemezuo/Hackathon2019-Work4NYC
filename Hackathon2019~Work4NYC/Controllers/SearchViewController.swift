@@ -70,7 +70,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         jobCell.saveButton.addTarget(self, action: #selector(saveButtonPressed(sender:)), for: .touchUpInside)
         jobCell.backgroundColor = .clear
         jobCell.layer.borderWidth = 2
-        jobCell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        jobCell.layer.borderColor = #colorLiteral(red: 0.3589735031, green: 0.8146317601, blue: 0.9653592706, alpha: 1)
         jobCell.layer.cornerRadius = 5
         return jobCell
     }
